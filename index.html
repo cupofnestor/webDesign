@@ -1,166 +1,119 @@
-IMG
+
 <html>
 <head>
 <title>MyPage</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
+<script src="JS/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="CSS/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="FONT/CICLE/stylesheet.css" />
-<style type="text/css">
-  body {
-  	background-color:black;
-	background-position:right top;
-	 background-image: url("IMG/bg.png"),url("IMG/bars.png");
-	 background-repeat:repeat-y,repeat;
-  	}
-  	html, body{height:100%; overflow:hidden;}
-      
-  	#heading {
-    background-color:#C3DBD0;
-  	margin-left:10%;
-  	height:60px;
-  	width:50%;
-  	}
-      
-    #body {
-    background-color:#7BA687;
-    margin-left:10%;
-  	height:Auto;
-  	width:50%;
-  	}
-    #header{
-    background-color:#ccddee;
-    margin-left:10%;
-    width:70%;
-    }
-  	.hump{
-    margin-top:5px;
-    margin-bottom:5px;
-   
-    border-top-right-radius:60px;
-	border-top-left-radius:60px;
-	border-bottom-left-radius:0;
-	border-bottom-right-radius:0;
-    padding-top:15px;
-    padding-bottom:0px;
-    padding-left:15px;
-    padding-right:15px;
-	box-shadow: #999 -2px -2px 2px, black 2px 2px 2px;
-	border:2px black solid;
-  	}
-      
-  	.squig{
-    margin-top:5px;
-    margin-bottom:5px;
-  	
-  	border-top-left-radius:0;
-	border-top-right-radius:60px;
-	border-bottom-right-radius:0;
-	border-bottom-left-radius:60px;
-    padding-top:5px;
-    padding-bottom:5px;
-    padding-left:15px;
-    padding-right:15px;
-	box-shadow: #999 -2px -2px 2px, black 2px 2px 2px;
-	border:2px black solid;
-  	}
-      
-    .squag{
-    margin-top:5px;
-    margin-bottom:5px;
-   
-  	border-top-right-radius:0;
-	border-top-left-radius:60px;
-	border-bottom-left-radius:0;
-	border-bottom-right-radius:60px;
-    padding-top:15px;
-    padding-bottom:0px;
-    padding-left:15px;
-    padding-right:15px;
-	box-shadow: #999 -2px -2px 2px, black 2px 2px 2px;
-	border:2px black solid;
-  	}
-      
-      
-      
-  	.sqBody{
-		margin-left:auto;
-  		width:auto;
-  		height:60px;
-  		background-color:none;
-  	}
-  	
-  	
-   *{  -webkit-margin-before: 0px;
+
+<link rel="stylesheet" type="text/css" href="CSS/iso.css" />
+<link rel="stylesheet" type="text/css" href="CSS/layout.css" />
+
+<style>
+ *{  -webkit-margin-before: 0px;
         -webkit-margin-after: 0px;
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;}
-  
- 
-  p{
-      font-family: CicleFina, Arial, sans-serif;
-color: #EEE;
-text-shadow: #333 -1px 01px 0px;
-letter-spacing: 0.12em;
-margin-bottom:5px;
-    }
-    
-    p:first-letter
-    {
-        margin-left:15px;
-    }
-  
-h1{font-family: CicleGordita, Arial, sans-serif;
-   font-size: 24pt;
-   font-variant: small-caps;
-   font-weight: bold;
-}
-
-h2{ 
-    font-size: 11pt;
-    font-family: CicleSemiItalic, Arial, sans-serif;
-    letter-spacing: 0.12em;
-       
-}
-  
-.squig h1{
-        text-shadow: black 1px 1px 1px, #c4ecee -1px -1px 3px;
-        color: #999;
- }
-      
-.squig h2{
-        margin-left:30px;
-        text-shadow: #eeeeef 1px 1px 0;
-        color: #333;
-     }
-    
-  </style>
-
+</style>
 
 </head>
 
 <body>
-<div id="header" class="hump"><h1>My Awesome Blog</h1></div>
-<div id="heading" class="squig">
-<h1>Dr. Strangelove</h1>
-<h2>Or:  How I Learned to Stop Worrying and Love the Bomb.</h2>
-</div>
+    <div id = "wrapper">
+        <div id="header" ><h1>My Cute Gallery</h1></div>
+        
+        <ul id="filters">
+          <li><a href="#" data-filter="*">show all</a></li>
+          <li><a href="#" data-filter=".dog">dogs</a></li>
+          <li><a href="#" data-filter=".cat">cats</a></li>
+          <li><a href="#" data-filter=".bunny">bunnies</a></li>
+        <li><a href="#" data-filter=".dog.cat">cats & dogs</a></li>
+        <li><a href="#" data-filter=".bunny.dog">bunnies & dogs</a></li>
+        <li><a href="#" data-filter=".bunny.cat">cats & bunnies</a></li>
+        <li><a href="#" data-filter=".bunny.cat.dog">cats & dogs & bunnies</a></li>
+        </ul>
+        
+        
+        
+        <div id = "container">
+            
+            <div class ="item doubleW dog" ><a href ="IMG/cute/dog1.jpeg" rel="prettyPhoto"  ><img class="thumb"  src = "IMG/cute/dog1.jpeg" /></a></div>
+            <div class ="item  doubleW doubleH dog" ><img class="thumb"  src = "IMG/cute/dog2.jpeg" /></div>
+            <div class ="item dog" ><img class="thumb"  src = "IMG/cute/dog3.jpeg" /></div>
+            <div class ="item cat doubleH" ><img class="thumb"  src = "IMG/cute/cat1.jpeg" /></div>
+            <div class ="item cat doubleW" ><img class="thumb"  src = "IMG/cute/cat2.jpeg" /></div>
+            <div class ="item cat" ><img class="thumb"  src = "IMG/cute/cat3.jpeg" /></div>
+            <div class ="item   cat dog" ><img class="thumb"  src = "IMG/cute/catdog1.jpeg" /></div>
+             <div class ="item cat dog doubleW" ><img class="thumb"  src = "IMG/cute/catdog2.jpeg" /></div>
+            <div class ="item cat dog" ><img class="thumb"  src = "IMG/cute/catdog3.jpeg" /></div>
+            <div class ="item bunny" ><img class="thumb"  src = "IMG/cute/bunny1.jpeg" /></div>
+            <div class ="item bunny tripleW doubleH" ><img class="thumb"  src = "IMG/cute/bunny2.jpeg" /></div>
+            <div class ="item bunny doubleH" ><img class="thumb"  src = "IMG/cute/bunny3.jpeg" /></div>
+            <div class ="item cat bunny" ><img class="thumb"  src = "IMG/cute/catbunny1.jpeg" /></div>
+            <div class ="item cat bunny" ><img class="thumb"  src = "IMG/cute/catbunny2.jpeg" /></div>
+            <div class ="item cat bunny" ><img class="thumb"  src = "IMG/cute/catbunny3.jpeg" /></div>
+            <div class ="item cat dog bunny" ><img class="thumb"  src = "IMG/cute/catdogbunny.jpeg" /></div>
+             <div class ="item dog bunny doubleW doubleH" ><img class="thumb"  src = "IMG/cute/dogbunny1.jpeg" /></div>
+            <div class ="item dog bunny doubleW" ><img class="thumb"  src = "IMG/cute/dogbunny2.jpeg" /></div>
+            <div class ="item dog bunny doubleH doubleH" ><img class="thumb"  src = "IMG/cute/dogbunny3.jpeg" /></div>
+            
+            
+            
+        </div> <!-- container -->
+        
+         <!---isotope-->
+          
+         <script src="JS/jquery.isotope.min.js"></script>
+          <script>
+            $(function(){
+              
+              var $container = $('#container');
+              
+              $container.isotope({
+                itemSelector: '.item',
+               
+                layoutMode : 'masonry',
+                sortBy: 'random'
+             
+               
+              });
+              $('#filters a').click(function(){
+                var selector = $(this).attr('data-filter');
+                $container.isotope({ filter: selector,layoutMode : 'masonry' });
+                return false;
+            });
+              
+            });
+            
+            
+            
+            
+            $(document).ready(function(){
+            
+           
+
+           //This function rewrites img tags to background styles
+             $("img.thumb").load(function() {
+                 $(this).wrap(function(){
+                     return '<a href=' + $(this).attr('src') + ' rel="prettyPhoto"  title="Ain\'t it cute?" " class="inset ' + $(this).attr('class') + '" style="position:relative; display:inline-block; background-position: -'+$(this).width()/3+'px -'+$(this).height()/3+'px; background-image:url(' + $(this).attr('src') + ');" />';
+                 });
+                 $(this).css("visibility","hidden");
+                 $("a[rel^='prettyPhoto']").prettyPhoto();
+             });
+             
+              
+ 
+});
+          </script>
+        
+        </script>
 
 
-<div id="body" class="squag">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-
-<body>
-<div id="heading" class="squig">
-<h1>Heading</h1>
-</div>
-
-
-<div id="body" class="squag">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-
+        
+    </div><!--wrapper-->
+<div id = "footer" >W. Ryan Nestor :: 2012</div>
 </body>
 
 </html>
